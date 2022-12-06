@@ -36,7 +36,7 @@ jobs:
         run: 
           command: |
               cp target/*.war docker/app/
-              docker login -u $DOCKER_USER -p $DOCKER_PASS
+              docker login -u $Algaithy001 -p $Ma04485674,docker
               docker build --no-cache -t $DOCKER_USER/$CIRCLE_PROJECT_REPONAME:$(cat tempvers.txt) docker
               docker push $DOCKER_USER/$CIRCLE_PROJECT_REPONAME:$(cat tempvers.txt)
           name: "Build application Docker image"
